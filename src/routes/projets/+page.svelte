@@ -7,20 +7,13 @@
 
   // --- BASE DE DONNÉES DEs PROJETS ---
 const allProjects = [
-  {
-    title: "Osengo Fitness",
-    description: "Création d'une landing page moderne pour une salle de sport, axée sur la conversion et la présentation des offres d'abonnement.",
-    imageUrl: "/images/projet-osengo-fitness.jpg",
-    tags: ["HTML", "CSS", "Design"],
-    liveUrl: "#", // Mettez le lien vers le site en ligne si vous l'avez
-    sourceUrl: "#" // Mettez le lien vers le code source si vous l'avez
-  },
+
   {
     title: "77events",
     description: "Intégration d'une maquette pour une agence événementielle, avec un focus sur les animations et le responsive design.",
     imageUrl: "/images/projet-77events.jpg",
     tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "#",
+    liveUrl: "https://debuggez-le-site-agence.vercel.app/#nos-services",
     sourceUrl: "#"
   },
   {
@@ -28,7 +21,15 @@ const allProjects = [
     description: "Développement d'un site pour un établissement de santé, avec une structure complexe et une navigation intuitive.",
     imageUrl: "/images/projet-centre-hospitalier.jpg",
     tags: ["Design", "Intégration"],
-    liveUrl: "#",
+    liveUrl: "https://chtest.vercel.app/",
+    sourceUrl: "#"
+  },
+   {
+    title: "Mon Portfolio (Ce site)",
+    description: "Démonstration de mes compétences avec SvelteKit, animée et optimisée pour une expérience mémorable.",
+    imageUrl: "/images/projet-portfolio.jpg",
+    tags: ["SvelteKit", "Tailwind CSS", "Design"],
+    liveUrl: "/",
     sourceUrl: "#"
   },
   {
@@ -36,7 +37,7 @@ const allProjects = [
     description: "Site de réservation pour restaurants avec des animations CSS avancées pour une expérience utilisateur dynamique.",
     imageUrl: "/images/projet-ohmyfood.jpg",
     tags: ["HTML", "CSS", "Animations"],
-    liveUrl: "#",
+    liveUrl: "https://quentinpruvost.github.io/oh_my_food/",
     sourceUrl: "#"
   },
   {
@@ -44,7 +45,7 @@ const allProjects = [
     description: "Optimisation SEO et performance (Lighthouse) d'un site de photographe pour améliorer sa visibilité et son temps de chargement.",
     imageUrl: "/images/projet-nina-carducci.jpg",
     tags: ["SEO", "Performance", "Débogage"],
-    liveUrl: "#",
+    liveUrl: "https://quentinpruvost.github.io/nina_carduccifinal/#about",
     sourceUrl: "#"
   },
   {
@@ -52,16 +53,16 @@ const allProjects = [
     description: "Création d'une application web avec React pour une plateforme de location immobilière, incluant des galeries et des fiches détaillées.",
     imageUrl: "/images/projet-kasa.jpg",
     tags: ["React", "JavaScript", "API"],
-    liveUrl: "#",
+    liveUrl: "https://kasa-app-amber.vercel.app/appartement/46d188c5",
     sourceUrl: "#"
   },
-  {
-    title: "Mon Portfolio (Ce site)",
-    description: "Démonstration de mes compétences avec SvelteKit, animée et optimisée pour une expérience mémorable.",
-    imageUrl: "/images/projet-portfolio.jpg",
-    tags: ["SvelteKit", "Tailwind CSS", "Design"],
-    liveUrl: "/",
-    sourceUrl: "#"
+    {
+    title: "Osengo Fitness",
+    description: "Création d'une landing page moderne pour une salle de sport, axée sur la conversion et la présentation des offres d'abonnement.",
+    imageUrl: "/images/projet-osengo-fitness.jpg",
+    tags: ["HTML", "CSS", "Design"],
+    liveUrl: "https://quentinpruvost.github.io/site-salle-de-sport/index.html", // Mettez le lien vers le site en ligne si vous l'avez
+    sourceUrl: "#" // Mettez le lien vers le code source si vous l'avez
   }
 ];
   // --- LOGIQUE DE FILTRAGE ---

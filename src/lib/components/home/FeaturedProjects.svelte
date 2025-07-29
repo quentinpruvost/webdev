@@ -16,7 +16,7 @@
     description: "Développement d'un site pour un établissement de santé, avec une structure complexe et une navigation intuitive.",
     imageUrl: "/images/projet-centre-hospitalier.jpg",
     tags: ["Design", "Intégration"],
-    liveUrl: "#",
+    liveUrl: "https://chtest.vercel.app/",
     sourceUrl: "#"
   }
   ];
