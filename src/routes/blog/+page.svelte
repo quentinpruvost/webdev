@@ -31,6 +31,41 @@
     </article>
   </a>
   <a 
+  href="/blog/bases-html" 
+  class="block group bg-white rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-blue-500"
+>
+  <article class="p-8">
+    <p class="text-sm text-slate-500">1er août 2025</p>
+    <h2 class="mt-2 text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+      Les Bases du HTML : Structurez Votre Première Page Web
+    </h2>
+    <p class="mt-2 text-slate-600">
+      Le point de départ de toute aventure sur le web.
+    </p>
+    <p class="mt-4 font-semibold text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      Lire la suite →
+    </p>
+  </article>
+</a>
+
+<a 
+  href="/blog/introduction-css" 
+  class="block group bg-white rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-blue-500"
+>
+  <article class="p-8">
+    <p class="text-sm text-slate-500">2 août 2025</p>
+    <h2 class="mt-2 text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+      Introduction au CSS : Donnez Vie à Vos Pages Web
+    </h2>
+    <p class="mt-2 text-slate-600">
+      Si le HTML est le squelette, le CSS est l'habillage.
+    </p>
+    <p class="mt-4 font-semibold text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      Lire la suite →
+    </p>
+  </article>
+</a>
+  <a 
   href="/blog/dangers-site-pas-cher" 
   class="block group bg-white rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-blue-500"
   in:fly={{ y: 20, duration: 600, delay: 400 }}

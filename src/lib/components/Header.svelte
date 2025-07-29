@@ -28,7 +28,7 @@
   <!-- On remet le style "glassmorphism" ici -->
   <nav class="relative mx-auto flex max-w-5xl items-center justify-between px-6 py-5 backdrop-blur-lg">
     <a href="/" class="z-50 text-xl font-extrabold text-slate-900 transition-colors hover:text-blue-600" on:click={() => { if (isOpen) toggleMenu(); }}>
-      atelierducode
+      Atelierducode
     </a>
     
     <!-- Menu Bureau -->
@@ -63,7 +63,7 @@
     >
       <div class="flex items-center justify-between">
         <a href="/" class="text-xl font-extrabold text-white" on:click={toggleMenu}>
-          atelierducode
+          Atelierducode
         </a>
         <button on:click={toggleMenu} class="p-2">
           <X class="text-white" />

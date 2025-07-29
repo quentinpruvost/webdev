@@ -17,7 +17,7 @@
     class="mt-6 max-w-2xl text-lg md:text-xl text-slate-600"
     in:fade={{ duration: 800, delay: 600 }}
   >
-    Bonjour, je suis quentin, développeur passionné. Je transforme des idées complexes en applications web et mobile élégantes et performantes.
+    Bonjour, je suis Quentin, développeur passionné. Je transforme des idées complexes en applications web ou mobile élégantes et performantes pour les particuliers, les entreprises et les startups.
   </p>
 
   <div 

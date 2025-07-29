@@ -8,9 +8,9 @@
   export let siteName: string = 'Quentin Pruvost - Développeur Web';
 
   const siteUrl = $page.url.origin;
-  const image = imageUrl ? `${siteUrl}${imageUrl}` : `${siteUrl}/default-social-image.png`; // Pensez à créer cette image par défaut dans /static
+  const image = imageUrl ? `${siteUrl}${imageUrl}` : `${siteUrl}/projet-portfolio.jpg`;
 
-  // --- NOUVEAUTÉ : Données Structurées (JSON-LD) ---
+  // --- Données Structurées (JSON-LD) ---
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
