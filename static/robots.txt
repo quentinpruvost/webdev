@@ -1,0 +1,6 @@
+# Allow all user agents
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://VOTRE_NOM_DE_DOMAINE/sitemap.xml
