@@ -3,22 +3,22 @@
   import { fade } from 'svelte/transition';
 
   const featuredProjects = [
-    {
-      title: "Portfolio (Ce site)",
-      description: "Construit avec SvelteKit, ce site est une vitrine de mon savoir-faire en design, animation et performance.",
-      imageUrl: "/images/portfolio-preview.jpg",
-      tags: ["SvelteKit", "Tailwind CSS", "Design"],
-      liveUrl: "/",
-      sourceUrl: "#" // Mettez votre lien GitHub ici
-    },
-    {
-      title: "Dashboard d'Analyse de Données",
-      description: "Une interface complexe construite en React pour la visualisation de données en temps réel. (Projet fictif)",
-      imageUrl: "/images/dashboard-preview.jpg",
-      tags: ["React", "API", "Design"],
-      liveUrl: "#",
-      sourceUrl: "#"
-    }
+  {
+    title: "Mon Portfolio (Ce site)",
+    description: "Démonstration de mes compétences avec SvelteKit, animée et optimisée pour une expérience mémorable.",
+    imageUrl: "/images/projet-portfolio.jpg",
+    tags: ["SvelteKit", "Tailwind CSS", "Design"],
+    liveUrl: "/",
+    sourceUrl: "#"
+  },
+  {
+    title: "Centre Hospitalier",
+    description: "Développement d'un site pour un établissement de santé, avec une structure complexe et une navigation intuitive.",
+    imageUrl: "/images/projet-centre-hospitalier.jpg",
+    tags: ["Design", "Intégration"],
+    liveUrl: "#",
+    sourceUrl: "#"
+  }
   ];
 </script>
 

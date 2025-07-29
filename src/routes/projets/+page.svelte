@@ -5,42 +5,65 @@
   import Seo from '$lib/components/Seo.svelte';
   import { fly } from 'svelte/transition';
 
-  // --- BASE DE DONNÉES DE VOS PROJETS ---
-  const allProjects = [
-    {
-      title: "Portfolio (Ce site)",
-      description: "Démonstration de mes compétences avec SvelteKit, animée et optimisée pour une expérience mémorable.",
-      imageUrl: "/images/portfolio-preview.jpg",
-      tags: ["SvelteKit", "Tailwind CSS", "Design"],
-      liveUrl: "/",
-      sourceUrl: "https://github.com/VOTRE-PSEUDO/portfolio"
-    },
-    {
-      title: "Projet E-commerce Fictif",
-      description: "Boutique en ligne complète avec gestion de panier, authentification et une interface d'administration.",
-      imageUrl: "/images/ecommerce-preview.jpg",
-      tags: ["SvelteKit", "Node.js", "Base de données"],
-      liveUrl: "#",
-      sourceUrl: "#"
-    },
-    {
-      title: "Application Mobile de Tâches",
-      description: "Une application cross-platform pour gérer ses tâches quotidiennes, développée avec React Native.",
-      imageUrl: "/images/mobile-app-preview.jpg", // Ajoutez une image
-      tags: ["React Native", "Mobile", "TypeScript"],
-      liveUrl: "#",
-      sourceUrl: "#"
-    },
-    {
-      title: "Dashboard d'Analyse de Données",
-      description: "Interface d'analyse de données en temps réel construite avec React et des librairies de graphiques.",
-      imageUrl: "/images/dashboard-preview.jpg", // Ajoutez une image
-      tags: ["React", "Design", "API"],
-      liveUrl: "#",
-      sourceUrl: "#"
-    }
-  ];
-
+  // --- BASE DE DONNÉES DEs PROJETS ---
+const allProjects = [
+  {
+    title: "Osengo Fitness",
+    description: "Création d'une landing page moderne pour une salle de sport, axée sur la conversion et la présentation des offres d'abonnement.",
+    imageUrl: "/images/projet-osengo-fitness.jpg",
+    tags: ["HTML", "CSS", "Design"],
+    liveUrl: "#", // Mettez le lien vers le site en ligne si vous l'avez
+    sourceUrl: "#" // Mettez le lien vers le code source si vous l'avez
+  },
+  {
+    title: "77events",
+    description: "Intégration d'une maquette pour une agence événementielle, avec un focus sur les animations et le responsive design.",
+    imageUrl: "/images/projet-77events.jpg",
+    tags: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "#",
+    sourceUrl: "#"
+  },
+  {
+    title: "Centre Hospitalier",
+    description: "Développement d'un site pour un établissement de santé, avec une structure complexe et une navigation intuitive.",
+    imageUrl: "/images/projet-centre-hospitalier.jpg",
+    tags: ["Design", "Intégration"],
+    liveUrl: "#",
+    sourceUrl: "#"
+  },
+  {
+    title: "Ohmyfood",
+    description: "Site de réservation pour restaurants avec des animations CSS avancées pour une expérience utilisateur dynamique.",
+    imageUrl: "/images/projet-ohmyfood.jpg",
+    tags: ["HTML", "CSS", "Animations"],
+    liveUrl: "#",
+    sourceUrl: "#"
+  },
+  {
+    title: "Nina Carducci - Photographe",
+    description: "Optimisation SEO et performance (Lighthouse) d'un site de photographe pour améliorer sa visibilité et son temps de chargement.",
+    imageUrl: "/images/projet-nina-carducci.jpg",
+    tags: ["SEO", "Performance", "Débogage"],
+    liveUrl: "#",
+    sourceUrl: "#"
+  },
+  {
+    title: "Kasa - Location d'appartements",
+    description: "Création d'une application web avec React pour une plateforme de location immobilière, incluant des galeries et des fiches détaillées.",
+    imageUrl: "/images/projet-kasa.jpg",
+    tags: ["React", "JavaScript", "API"],
+    liveUrl: "#",
+    sourceUrl: "#"
+  },
+  {
+    title: "Mon Portfolio (Ce site)",
+    description: "Démonstration de mes compétences avec SvelteKit, animée et optimisée pour une expérience mémorable.",
+    imageUrl: "/images/projet-portfolio.jpg",
+    tags: ["SvelteKit", "Tailwind CSS", "Design"],
+    liveUrl: "/",
+    sourceUrl: "#"
+  }
+];
   // --- LOGIQUE DE FILTRAGE ---
   let activeFilter = 'Tous';
   
