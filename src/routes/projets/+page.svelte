@@ -1,77 +1,14 @@
 <script lang="ts">
-  import PageHeader from '$lib/components/projets/PageHeader.svelte';
-  import FilterSystem from '$lib/components/projets/FilterSystem.svelte';
   import ProjectCard from '$lib/components/ProjectCard.svelte';
   import Seo from '$lib/components/Seo.svelte';
   import { fly } from 'svelte/transition';
+  import { projects } from '$lib/projects';
 
-  // --- BASE DE DONNÉES DEs PROJETS ---
-const allProjects = [
+  const allProjects = projects;
 
-  {
-    title: "77events",
-    description: "Intégration d'une maquette pour une agence événementielle, avec un focus sur les animations et le responsive design.",
-    imageUrl: "/images/projet-77events.jpg",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://debuggez-le-site-agence.vercel.app/#nos-services",
-    sourceUrl: "#"
-  },
-  {
-    title: "Centre Hospitalier",
-    description: "Développement d'un site pour un établissement de santé, avec une structure complexe et une navigation intuitive.",
-    imageUrl: "/images/projet-centre-hospitalier.jpg",
-    tags: ["Design", "Intégration"],
-    liveUrl: "https://chtest.vercel.app/",
-    sourceUrl: "#"
-  },
-   {
-    title: "Mon Portfolio (Ce site)",
-    description: "Démonstration de mes compétences avec SvelteKit, animée et optimisée pour une expérience mémorable.",
-    imageUrl: "/images/projet-portfolio.jpg",
-    tags: ["SvelteKit", "Tailwind CSS", "Design"],
-    liveUrl: "/",
-    sourceUrl: "#"
-  },
-  {
-    title: "Ohmyfood",
-    description: "Site de réservation pour restaurants avec des animations CSS avancées pour une expérience utilisateur dynamique.",
-    imageUrl: "/images/projet-ohmyfood.jpg",
-    tags: ["HTML", "CSS", "Animations"],
-    liveUrl: "https://quentinpruvost.github.io/oh_my_food/",
-    sourceUrl: "#"
-  },
-  {
-    title: "Nina Carducci - Photographe",
-    description: "Optimisation SEO et performance (Lighthouse) d'un site de photographe pour améliorer sa visibilité et son temps de chargement.",
-    imageUrl: "/images/projet-nina-carducci.jpg",
-    tags: ["SEO", "Performance", "Débogage"],
-    liveUrl: "https://quentinpruvost.github.io/nina_carduccifinal/#about",
-    sourceUrl: "#"
-  },
-  {
-    title: "Kasa - Location d'appartements",
-    description: "Création d'une application web avec React pour une plateforme de location immobilière, incluant des galeries et des fiches détaillées.",
-    imageUrl: "/images/projet-kasa.jpg",
-    tags: ["React", "JavaScript", "API"],
-    liveUrl: "https://kasa-app-amber.vercel.app/appartement/46d188c5",
-    sourceUrl: "#"
-  },
-    {
-    title: "Osengo Fitness",
-    description: "Création d'une landing page moderne pour une salle de sport, axée sur la conversion et la présentation des offres d'abonnement.",
-    imageUrl: "/images/projet-osengo-fitness.jpg",
-    tags: ["HTML", "CSS", "Design"],
-    liveUrl: "https://quentinpruvost.github.io/site-salle-de-sport/index.html", // Mettez le lien vers le site en ligne si vous l'avez
-    sourceUrl: "#" // Mettez le lien vers le code source si vous l'avez
-  }
-];
-  // --- LOGIQUE DE FILTRAGE ---
   let activeFilter = 'Tous';
-  
-  // On extrait toutes les technologies uniques pour les boutons de filtre
   const allTags = [...new Set(allProjects.flatMap(p => p.tags))];
-
-  // $: est une déclaration réactive. Ce code se ré-exécute à chaque fois que `activeFilter` change.
+  
   $: filteredProjects = activeFilter === 'Tous' 
     ? allProjects 
     : allProjects.filter(p => p.tags.includes(activeFilter));
@@ -82,20 +19,51 @@ const allProjects = [
   description="Découvrez une sélection de mes réalisations en développement web et mobile."
 />
 
-<PageHeader />
+<section 
+  class="text-center py-16 md:py-24"
+  in:fly={{ y: -30, duration: 800, delay: 200 }}
+>
+  <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-slate-900">
+    Mon Travail.
+  </h1>
+  <p class="mt-4 max-w-xl mx-auto text-lg text-slate-600">
+    Une sélection de projets où j'ai transformé des idées en solutions concrètes et performantes.
+  </p>
+</section>
 
-<FilterSystem 
-  technologies={allTags}
-  activeFilter={activeFilter}
-  on:filterChange={(e) => activeFilter = e.detail}
-/>
+<div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+  <button 
+    on:click={() => activeFilter = 'Tous'}
+    class="px-4 py-2 text-sm font-semibold rounded-full transition-colors duration-300"
+    class:bg-slate-900={activeFilter === 'Tous'}
+    class:text-white={activeFilter === 'Tous'}
+    class:bg-white={activeFilter !== 'Tous'}
+    class:text-slate-700={activeFilter !== 'Tous'}
+  >
+    Tous
+  </button>
+  {#each allTags as tech}
+    <button
+      on:click={() => activeFilter = tech}
+      class="px-4 py-2 text-sm font-semibold rounded-full transition-colors duration-300"
+      class:bg-slate-900={activeFilter === tech}
+      class:text-white={activeFilter === tech}
+      class:bg-white={activeFilter !== tech}
+      class:text-slate-700={activeFilter !== tech}
+    >
+      {tech}
+    </button>
+  {/each}
+</div>
 
 {#key activeFilter}
-  <div class="grid md:grid-cols-2 gap-8">
+  <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
     {#each filteredProjects as project, i}
-      <div in:fly={{ y: 20, duration: 500, delay: 100 * i }}>
-        <ProjectCard {...project} />
-      </div>
+      <a href="/projets/{project.slug}">
+      <div in:fly={{ y: 20, duration: 500, delay: 100 * i }} class="h-full">
+                  <ProjectCard {...project} />
+        </div>
+      </a>
     {/each}
   </div>
 {/key}
