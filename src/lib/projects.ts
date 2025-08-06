@@ -30,6 +30,25 @@ export const projects: Project[] = [
 			'/images/snackattack-map.jpg'
 		]
 	},
+	    { // ▼▼▼ ON AJOUTE CE NOUVEAU BLOC EN PREMIER ▼▼▼
+		slug: 'trendy',
+		title: 'Trendy - Boutique E-commerce',
+		description: "Développement d'une boutique en ligne complète pour une marque de vêtements, incluant un back-office pour la gestion des produits.",
+		imageUrl: '/images/trendy-hero.jpg',
+		tags: ['SvelteKit', 'E-commerce', 'Backend', 'Design'],
+		liveUrl: 'https://ecom-o3n33cjx8-quentinpruvosts-projects.vercel.app/',
+		sourceUrl: '#',
+		problem: "La marque de vêtements 'Trendy' souhaitait lancer sa boutique en ligne pour vendre ses collections. Le besoin était double : une interface client esthétique et facile à utiliser, et un back-office administrateur simple pour gérer les produits, les stocks et les utilisateurs.",
+		solution: "J'ai développé une solution e-commerce complète de A à Z. Côté client, le site propose un catalogue de produits avec des filtres, une page de détail pour chaque article, un panier d'achat et un processus de paiement. Côté administrateur, j'ai créé un dashboard sécurisé permettant de visualiser les statistiques de vente, d'ajouter ou de modifier des produits, et de gérer les comptes clients.",
+		galleryImages: [
+			'/images/trendy-collection.jpg',
+			'/images/trendy-produits.jpg',
+            '/images/trendy-panier.jpg',
+			'/images/trendy-connexion.jpg',
+			'/images/trendy-admin-dashboard.jpg',
+			'/images/trendy-admin-produits.jpg'
+		]
+	},
     {
  		slug: 'sushi-flow',
 		title: 'Sushi Flow - Restaurant Japonais',
