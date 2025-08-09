@@ -1,24 +1,18 @@
 <script lang="ts">
   import Seo from '$lib/components/Seo.svelte';
   import { fly, fade } from 'svelte/transition';
-  import { ChevronLeft, ChevronRight } from 'lucide-svelte';
+  import Lightbox from '$lib/components/projets/Lightbox.svelte'; // Importer le nouveau composant
 
   export let data;
   const { project } = data;
 
-  let currentIndex = 0;
+  // Variables pour gérer l'ouverture/fermeture et l'image de départ de la lightbox
+  let lightboxOpen = false;
+  let lightboxStartIndex = 0;
 
-  // Fonctions pour le carrousel d'images
-  function next() {
-    if (project.galleryImages) {
-      currentIndex = (currentIndex + 1) % project.galleryImages.length;
-    }
-  }
-
-  function prev() {
-    if (project.galleryImages) {
-      currentIndex = (currentIndex - 1 + project.galleryImages.length) % project.galleryImages.length;
-    }
+  function openLightbox(index: number) {
+    lightboxStartIndex = index;
+    lightboxOpen = true;
   }
 </script>
 
@@ -71,26 +65,27 @@
   {/if}
 
   {#if project.galleryImages && project.galleryImages.length > 0}
-    <div class="mt-20 max-w-4xl mx-auto">
+    <div class="mt-20 max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-8">Galerie du Projet</h2>
-      <div class="relative">
-        {#key currentIndex}
-          <img 
-            src={project.galleryImages[currentIndex]} 
-            alt="Galerie du projet {project.title} - vue {currentIndex + 1}" 
-            class="rounded-lg shadow-lg"
-            in:fade={{ duration: 300 }}
-          />
-        {/key}
-        
-        <button on:click={prev} class="absolute top-1/2 left-2 -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 transition-colors">
-          <ChevronLeft />
-        </button>
-        <button on:click={next} class="absolute top-1/2 right-2 -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 transition-colors">
-          <ChevronRight />
-        </button>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {#each project.galleryImages as image, i}
+          <button on:click={() => openLightbox(i)} class="overflow-hidden rounded-lg group aspect-video">
+            <img 
+              src={image} 
+              alt="Galerie du projet {project.title} - vue {i + 1}" 
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+          </button>
+        {/each}
       </div>
     </div>
   {/if}
-
 </div>
+
+{#if lightboxOpen}
+  <Lightbox 
+    images={project.galleryImages!} startIndex={lightboxStartIndex}
+    on:close={() => lightboxOpen = false}
+  />
+{/if}

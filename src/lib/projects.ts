@@ -29,27 +29,7 @@ export const projects: Project[] = [
 			'/images/snackattack-login.jpg',
 			'/images/snackattack-map.jpg'
 		]
-	},
-	    { // ▼▼▼ ON AJOUTE CE NOUVEAU BLOC EN PREMIER ▼▼▼
-		slug: 'trendy',
-		title: 'Trendy - Boutique E-commerce',
-		description: "Développement d'une boutique en ligne complète pour une marque de vêtements, incluant un back-office pour la gestion des produits.",
-		imageUrl: '/images/trendy-hero.jpg',
-		tags: ['SvelteKit', 'E-commerce', 'Backend', 'Design'],
-		liveUrl: 'https://ecom-o3n33cjx8-quentinpruvosts-projects.vercel.app/',
-		sourceUrl: '#',
-		problem: "La marque de vêtements 'Trendy' souhaitait lancer sa boutique en ligne pour vendre ses collections. Le besoin était double : une interface client esthétique et facile à utiliser, et un back-office administrateur simple pour gérer les produits, les stocks et les utilisateurs.",
-		solution: "J'ai développé une solution e-commerce complète de A à Z. Côté client, le site propose un catalogue de produits avec des filtres, une page de détail pour chaque article, un panier d'achat et un processus de paiement. Côté administrateur, j'ai créé un dashboard sécurisé permettant de visualiser les statistiques de vente, d'ajouter ou de modifier des produits, et de gérer les comptes clients.",
-		galleryImages: [
-			'/images/trendy-collection.jpg',
-			'/images/trendy-produits.jpg',
-            '/images/trendy-panier.jpg',
-			'/images/trendy-connexion.jpg',
-			'/images/trendy-admin-dashboard.jpg',
-			'/images/trendy-admin-produits.jpg'
-		]
-	},
-    {
+	},    {
  		slug: 'sushi-flow',
 		title: 'Sushi Flow - Restaurant Japonais',
 		description: "Développement d'un site vitrine et de commande pour un restaurant de sushis. Design élégant et expérience utilisateur fluide.",
@@ -65,6 +45,44 @@ export const projects: Project[] = [
             '/images/sushiflow-menu.jpg',
 		]
     },
+	    { 
+		slug: 'trendy',
+		title: 'Trendy - Boutique E-commerce',
+		description: "Développement d'une boutique en ligne complète pour une marque de vêtements, incluant un back-office pour la gestion des produits.",
+		imageUrl: '/images/trendy-hero.jpg',
+		tags: ['SvelteKit', 'E-commerce', 'Backend', 'Design'],
+		liveUrl: 'https://ecom-gules-five.vercel.app/',
+		sourceUrl: '#',
+		problem: "La marque de vêtements 'Trendy' souhaitait lancer sa boutique en ligne pour vendre ses collections. Le besoin était double : une interface client esthétique et facile à utiliser, et un back-office administrateur simple pour gérer les produits, les stocks et les utilisateurs.",
+		solution: "J'ai développé une solution e-commerce complète de A à Z. Côté client, le site propose un catalogue de produits avec des filtres, une page de détail pour chaque article, un panier d'achat et un processus de paiement. Côté administrateur, j'ai créé un dashboard sécurisé permettant de visualiser les statistiques de vente, d'ajouter ou de modifier des produits, et de gérer les comptes clients.",
+		galleryImages: [
+			'/images/trendy-collection.jpg',
+			'/images/trendy-produits.jpg',
+            '/images/trendy-panier.jpg',
+			'/images/trendy-connexion.jpg',
+			'/images/trendy-admin-dashboard.jpg',
+			'/images/trendy-admin-produits.jpg'
+		]
+	},
+
+    { 
+		slug: 'momocha',
+		title: 'Momocha - Salon de Thé & Bubble Tea',
+		description: "Création d'un site web et d'une plateforme de commande en ligne pour une marque de bubble tea et desserts asiatiques.",
+		imageUrl: '/images/momocha-hero.jpg',
+		tags: ['SvelteKit', 'E-commerce', 'Design UI/UX'],
+		liveUrl: 'https://teashop-lemon.vercel.app/',
+		sourceUrl: '#',
+		problem: "Momocha souhaitait lancer son site internet pour développer sa notoriété et proposer un service de commande en ligne. Le défi était de créer une expérience digitale aussi fun et gourmande que leurs produits, tout en étant extrêmement simple à utiliser pour les clients.",
+		solution: "J'ai développé un site web complet avec une identité visuelle forte, des micro-animations et des visuels attrayants. Le parcours utilisateur est optimisé pour la commande : une carte interactive avec des filtres, une modale de personnalisation de produit, et un panier d'achat simple et efficace. Le site est entièrement responsive et met en avant les produits phares de la marque.",
+		galleryImages: [
+			'/images/momocha-incontournables.jpg',
+			'/images/momocha-carte.jpg',
+            '/images/momocha-modal.jpg',
+			'/images/momocha-commande.jpg',
+			'/images/momocha-contact.jpg'
+		]
+	},
     {
 		slug: 'yummys',
 		title: "Yummy's - Glacier Artisanal",
